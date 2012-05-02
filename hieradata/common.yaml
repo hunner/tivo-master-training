@@ -4,3 +4,9 @@ classes:
 - ssh
 - jdk
 jdkversion: 1.6.0
+
+notifys:
+  one:
+    message: "this in example one"
+  two:
+    message: "this is another example"

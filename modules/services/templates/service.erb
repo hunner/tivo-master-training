@@ -1,0 +1,11 @@
+<% comments_a = Array(comments) -%>
+<% protocols.each_with_index do |protocol, i| -%>
+<%= name %>	<%= port %>/<%= protocol %>	<%= Array(aliases).join(' ') unless aliases == :undef %>	<%=
+if comments_a[i]
+  "# " + comments_a[i] 
+elsif comments_a[0]
+  "# " + comments_a[0]
+else
+end
+%>
+<% end -%>

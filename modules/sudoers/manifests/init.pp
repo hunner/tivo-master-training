@@ -1,4 +1,17 @@
-class sudoers($spooldir = '/tmp') {
+class apache($port = hiera("port","80","%{subclass}/apache")) {
+}
+
+class mysql($port = hiera("port","3306","%{subclass}/mysql")) {
+}
+
+:hierarchy:
+- %{subclass}/%{calling_module}
+- %{subclass}
+
+
+
+
+class sudoers($spooldir = hiera('spooldir')) {
   $temp_file = "${spooldir}/sudoers"
 
   File[$temp_file] -> Exec['check sudoers'] -> File['/etc/sudoers']
