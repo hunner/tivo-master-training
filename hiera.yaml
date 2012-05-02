@@ -1,0 +1,14 @@
+:hierarchy:
+- %{fqdn} #*
+- %{group}
+- %{class}
+- %{subclass}/%{group}
+- %{subclass}/%{class} #*
+- %{subclass}
+- common
+
+:backend:
+- yaml
+
+:yaml:
+  :datadir: '/etc/puppetlabs/puppet/hieradata'

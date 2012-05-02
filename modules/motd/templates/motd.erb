@@ -1,0 +1,14 @@
+<% require 'artii' -%>
+<% art = Artii::Base.new([]) %>
+Welcome to
+<%= art.asciify(hostname) %>
+
+Operating system: <%= operatingsystem %>
+Free memory:      <%= memoryfree %>
+Domain:           <%= domain %>
+Interfaces:
+<% interfaces.split(',').each do |interface| -%>
+<%   if has_variable?('ipaddress_' + interface) -%>
+    <%= interface %>: 		<%= eval('ipaddress_' + interface) %>
+<% end -%>
+<% end -%>
