@@ -1,5 +1,6 @@
----
-
-classes2:
+--- 
+classes: 
 - ntp
 - ssh
+- jdk
+jdkversion: 1.6.0

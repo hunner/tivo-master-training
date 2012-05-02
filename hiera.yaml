@@ -1,10 +1,10 @@
 :hierarchy:
 - %{fqdn} #*
 - %{group}
-- %{class}
 - %{subclass}/%{group}
-- %{subclass}/%{class} #*
+- %{subclass}/%{roles} #*
 - %{subclass}
+- %{roles} #*
 - common
 
 :backend:

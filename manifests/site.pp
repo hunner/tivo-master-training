@@ -40,9 +40,9 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
-  #$classes = split($tivoclasses, ',')
-  #class { $classes: }
-  #hiera_include('classes')
+  #$roles = split($tivoclasses, ',')
+  $foo = hiera('foo')
+  notify { $foo: }
   #$resources = hiera_hash('resources')
   #create_resource(dk
   #notify { "It worked!": }

@@ -1,0 +1,5 @@
+---
+classes:
+- 'dev_class'
+
+jdkversion: '1.7.0'

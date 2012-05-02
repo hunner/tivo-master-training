@@ -1,0 +1,5 @@
+---
+foo:
+- two
+
+memcached_version: '1.4.0'
